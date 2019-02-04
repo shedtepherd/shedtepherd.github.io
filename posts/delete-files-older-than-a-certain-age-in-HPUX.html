@@ -1,0 +1,188 @@
+﻿
+<!DOCTYPE html>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+
+	<head>
+		<title>Ted&#x27;s Notebook - Delete files older than a certain age in HP-UX</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />		
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+		<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+		<meta name="description" content="A compilation of scratch notes" />
+		<link type="application/rss+xml" rel="alternate" title="Ted&#x27;s Notebook" href="/feed.rss" />
+				<link type="application/atom+xml" rel="alternate" title="Ted&#x27;s Notebook" href="/feed.atom" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+		<meta name="application-name" content="Ted&#x27;s Notebook" />
+		<meta name="msapplication-tooltip" content="Ted&#x27;s Notebook" />
+		<meta name="msapplication-starturl" content="/" />
+
+		<meta property="og:title" content="Ted&#x27;s Notebook - Delete files older than a certain age in HP-UX" /> 
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://neocities.org/posts/delete-files-older-than-a-certain-age-in-HPUX.html" />
+		<!-- TODO: More social graph meta tags -->
+
+        <script src="/assets/js/highlight.pack.js"></script>   
+		
+        
+
+		
+	</head>
+
+	<body>
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+
+					<!-- Logo -->
+					<a href="/" class="logo">
+						<span class="title">Ted&#x27;s Notebook</span>
+					</a>
+
+					<!-- Nav -->
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>
+
+				</div>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					        <li><a href="/posts/index.html">Archive</a></li>
+        <li><a href="/tags/index.html">Tags</a></li>
+        <li><a href="/about.html">About Me</a></li>
+
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+    
+<header>
+    <h1>Delete files older than a certain age in HP-UX</h1>
+        <p>Delete files older than a certain age in *nix</p>
+            <p><em>Published on Sunday, January 6, 2019</em></p>
+            <ul class="actions small">
+                    <li><a role="button" href="/tags/find.html" class="button small">find</a></li>
+                    <li><a role="button" href="/tags/hp-ux.html" class="button small">hp-ux</a></li>
+                    <li><a role="button" href="/tags/mtime.html" class="button small">mtime</a></li>
+                    <li><a role="button" href="/tags/pipe.html" class="button small">pipe</a></li>
+                    <li><a role="button" href="/tags/rm.html" class="button small">rm</a></li>
+                    <li><a role="button" href="/tags/unix.html" class="button small">unix</a></li>
+        </ul>     
+</header>
+
+					
+					<div id="content">
+						
+
+<h1 id="delete-files-older-than-a-certain-age-in-hp-ux">Delete files older than a certain age in HP-UX</h1>
+<p>I've only tested this on a HP-UX v11.3 box, but I believe that this should work on any *nix system.</p>
+<h2 id="make-a-log-file-of-all-files-that-are-going-to-be-deleted">Make a log file of all files that are going to be deleted.</h2>
+<p><code>find . -name &quot;example&quot; -mtime +30 -exec ll {} \; &gt; report.log</code></p>
+<table class="table">
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>find</code></td>
+<td>the find command</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Searching in the current directory</td>
+</tr>
+<tr>
+<td><code>-name &quot;example&quot;</code></td>
+<td>search by filename</td>
+</tr>
+<tr>
+<td><code>-mtime +30</code></td>
+<td>if the modified time is older than 30 days</td>
+</tr>
+<tr>
+<td><code>-exec ll</code></td>
+<td>for each item found print it's LL</td>
+</tr>
+<tr>
+<td><code>{} \;</code></td>
+<td>This is the end portion to the find command</td>
+</tr>
+<tr>
+<td><code>&gt; report.log</code></td>
+<td>print each LL to this log file</td>
+</tr>
+</tbody>
+</table>
+<h2 id="delete-those-files">Delete those files</h2>
+<p><code>find . -name &quot;example&quot; -mtime +30 -exec rm {} \;</code></p>
+<h1 id="references">References</h1>
+<p>Gugulethu Ncube <a href="http://www.guguncube.com/957/unix-delete-files-older-than-a-certain-number-of-days">guguncube.com</a></p>
+
+
+
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+    <section>
+        <h2>Feeds</h2>
+        <ul class="actions small vertical">
+            <li><a href="/feed.rss" class="button small"><i class="fa fa-rss"></i> RSS Feed</a></li>
+                        <li><a href="/feed.atom" class="button small"><i class="fa fa-rss"></i> Atom Feed</a></li>
+        </ul>
+    </section>
+    <section>
+    </section>
+    <ul class="copyright">
+        <li>Copyright © 2019</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        <li><a href="https://wyam.io">Generated by Wyam</a></li>
+    </ul>
+</div>
+
+			</footer>
+
+		</div>
+		
+		
+
+		<!-- Scripts -->
+		<script>hljs.initHighlightingOnLoad();</script>
+		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/skel.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="/assets/js/main.js"></script>
+
+	</body>
+
+</html>

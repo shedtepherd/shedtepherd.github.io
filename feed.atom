@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<link rel="self" href="http://neocities.org/" />
+	<id>http://neocities.org/</id>
+	<title>Ted's Notebook</title>
+	<rights>2019</rights>
+	<updated>2019-01-07T03:42:30Z</updated>
+	<subtitle>A compilation of scratch notes</subtitle>
+	<entry>
+		<author>
+			<name>Ted Shepherd</name>
+		</author>
+		<link href="http://neocities.org/posts/update-time-in-windows-10.html" />
+		<id>http://neocities.org/posts/update-time-in-windows-10.html</id>
+		<title>Update time in Windows 10</title>
+		<updated>2019-01-06T00:00:00Z</updated>
+		<content>&lt;h1 id="update-time-in-windows-10"&gt;Update Time in Windows 10&lt;/h1&gt;
+&lt;p&gt;Sometimes the clock in Windows get in the wrong timezone and updating it manually sometimes doesn't stick.&lt;/p&gt;
+&lt;p&gt;To update the time in Windows restart the Windows Time service.&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;Sometimes the clock in Windows get in the wrong timezone and updating it manually sometimes doesn't stick.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<author>
+			<name>Ted Shepherd</name>
+		</author>
+		<link href="http://neocities.org/posts/delete-files-older-than-a-certain-age-in-HPUX.html" />
+		<id>http://neocities.org/posts/delete-files-older-than-a-certain-age-in-HPUX.html</id>
+		<title>Delete files older than a certain age in HP-UX</title>
+		<updated>2019-01-06T00:00:00Z</updated>
+		<content>&lt;h1 id="delete-files-older-than-a-certain-age-in-hp-ux"&gt;Delete files older than a certain age in HP-UX&lt;/h1&gt;
+&lt;p&gt;I've only tested this on a HP-UX v11.3 box, but I believe that this should work on any *nix system.&lt;/p&gt;
+&lt;h2 id="make-a-log-file-of-all-files-that-are-going-to-be-deleted"&gt;Make a log file of all files that are going to be deleted.&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;find . -name &amp;quot;example&amp;quot; -mtime +30 -exec ll {} \; &amp;gt; report.log&lt;/code&gt;&lt;/p&gt;
+&lt;table class="table"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;find&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;the find command&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Searching in the current directory&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-name &amp;quot;example&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;search by filename&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-mtime +30&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;if the modified time is older than 30 days&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-exec ll&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;for each item found print it's LL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;{} \;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;This is the end portion to the find command&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;gt; report.log&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;print each LL to this log file&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="delete-those-files"&gt;Delete those files&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;find . -name &amp;quot;example&amp;quot; -mtime +30 -exec rm {} \;&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id="references"&gt;References&lt;/h1&gt;
+&lt;p&gt;Gugulethu Ncube &lt;a href="http://www.guguncube.com/957/unix-delete-files-older-than-a-certain-number-of-days"&gt;guguncube.com&lt;/a&gt;&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;I've only tested this on a HP-UX v11.3 box, but I believe that this should work on any *nix system.&lt;/p&gt;</summary>
+	</entry>
+	<entry>
+		<author>
+			<name>Ted Shepherd</name>
+		</author>
+		<link href="http://neocities.org/posts/first-post.html" />
+		<id>http://neocities.org/posts/first-post.html</id>
+		<title>First Post</title>
+		<updated>2018-11-08T00:00:00Z</updated>
+		<content>&lt;p&gt;This is my first post!&lt;/p&gt;
+&lt;p&gt;This is going to become my online notebook where I'll make notes. Mostly this will start as a place for me to jot down things that I learn so that I remember them in the future. I hope that others might find it helpful too.&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;This is my first post!&lt;/p&gt;</summary>
+	</entry>
+</feed>
