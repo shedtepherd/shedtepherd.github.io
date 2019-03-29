@@ -12,14 +12,63 @@
                 <nav><ul>
                     <li><a href="/pages/About Me.html">About Me</a></li>
                     <li><a href="/pages/this is a test page.html">Testing page</a></li>
+                    <li><a href="/category/about-me.html">About Me</a></li>
                     <li><a href="/category/misc.html">misc</a></li>
                     <li><a href="/category/nix.html">*nix</a></li>
+                    <li><a href="/category/testing.html">Testing</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/Delete files older than a certain age in HP-UX.html">Delete files older than a certain age in HP-UX</a></h1>
+                    <h1 class="entry-title"><a href="/this is a test page.html">Testing page</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2019-03-29T00:00:00-07:00">
+                Published: Fri 29 March 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/ted-shepherd.html">Ted Shepherd</a>
+        </address>
+<p>In <a href="/category/testing.html">Testing</a>.</p>
+<p>tags: <a href="/tag/test.html">test</a> <a href="/tag/about.html">about</a> <a href="/tag/site.html">site</a> </p>
+</footer><!-- /.post-info --><h2>this is a page for testing</h2>
+<p>This is a template page</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/About Me.html" rel="bookmark"
+                           title="Permalink to About Me">About Me</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2019-03-28T00:00:00-07:00">
+                Published: Thu 28 March 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/ted-shepherd.html">Ted Shepherd</a>
+        </address>
+<p>In <a href="/category/about-me.html">About Me</a>.</p>
+<p>tags: <a href="/tag/about.html">about</a> </p>
+</footer><!-- /.post-info -->                <p>The about me page</p>
+                <a class="readmore" href="/About Me.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/Delete files older than a certain age in HP-UX.html" rel="bookmark"
+                           title="Permalink to Delete files older than a certain age in HP-UX">Delete files older than a certain age in HP-UX</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2019-01-06T00:00:00-07:00">
                 Published: Sun 06 January 2019
@@ -30,7 +79,7 @@
         </address>
 <p>In <a href="/category/nix.html">*nix</a>.</p>
 <p>tags: <a href="/tag/unix.html">unix</a> <a href="/tag/hp-ux.html">hp-ux</a> <a href="/tag/find.html">find</a> <a href="/tag/rm.html">rm</a> <a href="/tag/mtime.html">mtime</a> <a href="/tag/pipe.html">pipe</a> </p>
-</footer><!-- /.post-info --><p>I've only tested this on a HP-UX v11.3 box, but I believe that this should work on any *nix system. </p>
+</footer><!-- /.post-info -->                <p>I've only tested this on a HP-UX v11.3 box, but I believe that this should work on any *nix system. </p>
 <h2>Make a log file of all files that are going to be deleted.</h2>
 <p><code>find . -name "example" -mtime +30 -exec ll {} \; &gt; report.log</code></p>
 <table>
@@ -47,39 +96,10 @@
 </tr>
 <tr>
 <td><code>.</code></td>
-<td>Searching in the current directory</td>
-</tr>
-<tr>
-<td><code>-name "example"</code></td>
-<td>search by filename</td>
-</tr>
-<tr>
-<td><code>-mtime +30</code></td>
-<td>if the modified time is older than 30 days</td>
-</tr>
-<tr>
-<td><code>-exec ll</code></td>
-<td>for each item found print it's LL</td>
-</tr>
-<tr>
-<td><code>{} \;</code></td>
-<td>This is the end portion to the find command</td>
-</tr>
-<tr>
-<td><code>&gt; report.log</code></td>
-<td>print each LL to this log file</td>
-</tr>
-</tbody>
-</table>
-<h2>Delete those files</h2>
-<p><code>find . -name "example" -mtime +30 -exec rm {} \;</code></p>
-<h1>References</h1>
-<p>Gugulethu Ncube <a href="http://www.guguncube.com/957/unix-delete-files-older-than-a-certain-number-of-days">guguncube.com</a></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<td>Searching …</td></tr></tbody></table>
+                <a class="readmore" href="/Delete files older than a certain age in HP-UX.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
