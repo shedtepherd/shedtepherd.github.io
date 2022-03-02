@@ -15,7 +15,10 @@
         }
         
         .nav ul {
+            display: flex;
+            justify-content: space-evenly;
             list-style-type: none;
+            width: 100%;
         }
         
         .li {
@@ -28,17 +31,30 @@
         
         .top {
             background-image: url(/media/top.jpg);
-            text-align: center;
-            background-size: auto;
+            background-size: 100%;
+            background-position: center;
+            height: 57vw;
+            background-repeat: no-repeat;
         }
         
-        .couple {
-            background-color: red;
+        .top,
+        h1 {
+            position: relative;
+            padding-left: 1em;
+            padding-top: 1vw;
+            font-size: x-large;
         }
         
-        .venue {
-            background-color: yellow;
+        .top,
+        p {
+            position: relative;
+            padding-left: 2em;
+            font-size: x-large;
         }
+        
+        .couple {}
+        
+        .venue {}
     </style>
 </head>
 
