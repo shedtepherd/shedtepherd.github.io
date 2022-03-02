@@ -11,18 +11,42 @@
         body {
             margin: 0px;
             padding: 0px;
-            border: 0px;
+        }
+        
+        .nav {
+            background-color: lightgrey;
+            overflow: hidden;
         }
         
         .nav ul {
             display: flex;
             justify-content: space-evenly;
             list-style-type: none;
-            width: 100%;
+            overflow: hidden;
         }
         
         .li {
             display: inline-block;
+        }
+        
+        .li a:link {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .li a:visited {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .li a:hover {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .li a:active {
+            text-decoration: none;
+            color: black;
         }
         
         .sidebyside {
@@ -40,7 +64,7 @@
         .top,
         h1 {
             position: relative;
-            padding-left: 1em;
+            padding-left: 5vw;
             padding-top: 1vw;
             font-size: x-large;
         }
@@ -48,40 +72,49 @@
         .top,
         p {
             position: relative;
-            padding-left: 2em;
+            padding-left: 5vw;
             font-size: x-large;
         }
         
-        .couple {}
-        
-        .venue {}
+        @media screen and (max-width: 700px) {
+            .nav :not(:first-child) {
+                display: none;
+            }
+            .top,
+            p {
+                position: relative;
+                padding-left: 5vw;
+                margin-top: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="nav">
+    <nav class="nav" id="" nav ">
         <ul>
-            <li class="li"><a href="#top">S&T</a></li>
-            <li class="li"><a href="#couple">The Couple</a></li>
-            <li class="li"><a href="#venue">The Venue</a></li>
-            <li class="li"><a href="#party">The Wedding Party</a></li>
-            <li class="li"><a href="#faq">FAQ</a></li>
-            <li class="li"><a href="#registry">Registry</a></li>
-            <li class="li"><a href="#media">Photos and Videos</a></li>
+            <li class="li "><a href="#top ">Shelley and Ted</a></li>
+            <li class="li "><a href="#couple ">The Couple</a></li>
+            <li class="li "><a href="#venue ">Venue</a></li>
+            <li class="li "><a href="#party ">Wedding Party</a></li>
+            <li class="li "><a href="#faq ">FAQ</a></li>
+            <li class="li "><a href="#registry ">Registry</a></li>
+            <li class="li "><a href="#media ">Photos and Videos</a></li>
+
         </ul>
     </nav>
     <main>
-        <section id="#top" class="top">
+        <section id="#top " class="top ">
             <h1>Shelley and Ted's Wedding Website</h1>
             <p>October 16, 2022</p>
             <p>Tucson, Arizona</p>
         </section>
-        <section id="#couple" class="couple">
+        <section id="#couple " class="couple ">
             <h2>The Couple</h2>
             <p>Text will go here when the bride and groom build up the courage to write about themselves.</p>
-            <p><small><a href="#top">Back to top</a></small></p>
+            <p><small><a href="#top ">Back to top</a></small></p>
         </section>
-        <section id="venue" class="venue">
+        <section id="venue " class="venue ">
             <h2>The Wedding Venue</h2>
             <p>The wedding and reception will take place at the <em>La Mariposa Resort</em> in Tucson Arizona.</p>
             <address>
@@ -94,39 +127,39 @@
                 <dt>From I-10</dt>
                 <dd>Exit I-10 at Exit <strong>275</strong> and head north for about <strong>12 miles</strong>. Turn left onto <strong>Corte Vista la Mariposa</strong> and follow that road into the resort.</dd>
             </dl>
-            <p><small><a href="#top">Back to top</a></small></p>
+            <p><small><a href="#top ">Back to top</a></small></p>
         </section>
-        <section id="party" class="party">
+        <section id="party " class="party ">
             <h2>The Wedding Party</h2>
             <h3>Families</h3>
-            <figure class="sidebyside">
-                <img src="/media/brides-family.ext" alt="Bride's family">
+            <figure class="sidebyside ">
+                <img src="/media/brides-family.ext " alt="Bride 's family">
                 <figcaption>The Wermuth Family<br>Shelley, Stephanie, Shirley, Sharon</figcaption>
             </figure>
             <figure class="sidebyside">
-                <img src="/media/grooms-family.ext" alt="Groom's family">
+                <img src="/media/grooms-family.ext" alt="Groom's family ">
                 <figcaption>The Shepherd Family<br>>Ted, Will, Scott, Mary</figcaption>
             </figure>
             <h3>Wedding Party</h3>
-            <figure class="sidebyside">
-                <img src="/media/maidofhonor.ext" alt="Maid of Honor, Wil Williams">
+            <figure class="sidebyside ">
+                <img src="/media/maidofhonor.ext " alt="Maid of Honor, Wil Williams ">
                 <figcaption>Maid of Honor<br>>Wil Williams</figcaption>
             </figure>
-            <figure class="sidebyside">
-                <img src="/media/bestman.ext" alt="Best Man, Dexter Santos">
+            <figure class="sidebyside ">
+                <img src="/media/bestman.ext " alt="Best Man, Dexter Santos ">
                 <figcaption>Best Man<br>Dexter Santos</figcaption>
             </figure>
-            <figure class="sidebyside">
-                <img src="/media/bridesmaid.ext" alt="Bridesmaid, Stephanie Wermuth">
+            <figure class="sidebyside ">
+                <img src="/media/bridesmaid.ext " alt="Bridesmaid, Stephanie Wermuth ">
                 <figcaption>Bridesmaid<br>Stephanie Wermuth</figcaption>
             </figure>
-            <figure class="sidebyside">
-                <img src="/media/groomsman.ext" alt="Groomsman, Will Shepherd">
+            <figure class="sidebyside ">
+                <img src="/media/groomsman.ext " alt="Groomsman, Will Shepherd ">
                 <figcaption>Groomsman<br>Will Shepherd</figcaption>
             </figure>
-            <p><small><a href="#top">Back to top</a></small></p>
+            <p><small><a href="#top ">Back to top</a></small></p>
         </section>
-        <section id="faq" class="faq">
+        <section id="faq " class="faq ">
             <h2>Frequently Asked Questions</h2>
             <dl>
                 <dt>What should I wear?</dt>
@@ -152,22 +185,23 @@
                 <dt>What if I have a question that is not listed here?</dt>
                 <dd>Feel free to contact the bride or the groom.</dd>
             </dl>
-            <p><small><a href="#top">Back to top</a></small></p>
+            <p><small><a href="#top ">Back to top</a></small></p>
         </section>
-        <section id="registry" class="registry">
+        <section id="registry " class="registry ">
             <h2>Registry</h2>
             <p>This will be filled out when the bride and groom set up a registry somewhere.</p>
-            <p><small><a href="#top">Back to top</a></small></p>
+            <p><small><a href="#top ">Back to top</a></small></p>
         </section>
-        <section id="media" class="media">
+        <section id="media " class="media ">
             <h2>Photos and Videos</h2>
             <p>Photos and videos of the bride, groom, and wedding will go here when we get some.</p>
-            <p><small><a href="#top">Back to top</a></small></p>
+            <p><small><a href="#top ">Back to top</a></small></p>
         </section>
     </main>
     <footer>
         <p>Artisianly hand crafted website made to order by Ted Shepherd.</p>
     </footer>
+
 </body>
 
 </html>
