@@ -11,10 +11,11 @@
         body {
             margin: 0px;
             padding: 0px;
+            background: linear-gradient(white, goldenrod);
         }
         
         .nav {
-            background-color: lightgrey;
+            /* background-color: white; */
             overflow: hidden;
         }
         
@@ -23,6 +24,15 @@
             justify-content: space-evenly;
             list-style-type: none;
             overflow: hidden;
+        }
+        
+        h2,
+        h3,
+        h4,
+        p,
+        address,
+        dt {
+            padding: 0 2vw;
         }
         
         .li {
@@ -52,44 +62,33 @@
         .sidebyside {
             display: inline-block;
         }
-        
-        .top {
+        /*         .top {
             background-image: url(/media/top.jpg);
             background-size: 100%;
             background-position: center;
             height: 50vh;
             background-repeat: no-repeat;
             max-width: 100vw;
-        }
+        } */
         
-        .top,
         h1 {
-            position: relative;
-            padding-left: 5vw;
-            padding-top: 1vw;
-            font-size: x-large;
-            color: black
+            text-align: center;
+            color: goldenrod
         }
         
-        .top,
-        p {
-            position: relative;
-            padding-left: 5vw;
+        .top p {
+            text-align: center;
             font-size: x-large;
+        }
+        
+        .banner {
+            max-width: 100%;
+            display: flex;
         }
         
         @media screen and (max-width: 700px) {
-            .nav :not(:first-child) {
-                display: none;
-            }
-            .top p {
-                position: relative;
-                padding-left: 5vw;
-                margin-top: 0;
-                color: goldenrod;
-            }
-            .top h1 {
-                color: goldenrod;
+            .nav {
+                display: none
             }
         }
     </style>
@@ -98,7 +97,7 @@
 <body>
     <nav class="nav" id="" nav ">
         <ul>
-            <li class="li "><a href="#top ">Shelley and Ted</a></li>
+            <!-- <li class="li "><a href="#top ">Shelley and Ted</a></li> -->
             <li class="li "><a href="#couple ">The Couple</a></li>
             <li class="li "><a href="#venue ">Venue</a></li>
             <li class="li "><a href="#party ">Wedding Party</a></li>
@@ -110,9 +109,9 @@
     </nav>
     <main>
         <section id="#top " class="top ">
-            <h1>Shelley and Ted's Wedding Website</h1>
-            <p>October 16, 2022</p>
-            <p>Tucson, Arizona</p>
+            <h1>Shelley and Ted's Wedding</h1>
+            <img src="/media/top.jpg " class="banner " alt="Shelley and Ted embrace before a sunset ">
+            <p>October 16, 2022<br>Tucson, Arizona</p>
         </section>
         <section id="#couple " class="couple ">
             <h2>The Couple</h2>
