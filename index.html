@@ -69,17 +69,26 @@
             color: goldenrod
         }
         
-        .top p {
+        .header p {
             text-align: center;
             font-size: x-large;
         }
         
-        .banner {
-            background-image: url(/media/top.jpg);
+        div.banner {
             background-repeat: no-repeat;
             background-size: cover;
+            height: 50vh;
+            /* background-attachment: fixed; */
+        }
+        
+        .top {
+            background-image: url(/media/top.jpg);
             background-position: center;
-            height: 100%;
+        }
+        
+        .venue {
+            background-image: url(/media/lamariposa.jpg);
+            background-position: center;
         }
         
         @media screen and (max-width: 600px) {
@@ -130,21 +139,21 @@
         </ul>
     </nav>
     <main>
-        <section id="#top " class="top ">
+        <header id="top " class="header ">
             <h1>Shelley and Ted's Wedding</h1>
-            <div class="banner "></div>
-            <!-- <img src="/media/top.jpg " class="banner " alt="Shelley and Ted embrace before a sunset "> -->
+            <div class="banner top "></div>
             <p>October 16, 2022<br>Tucson, Arizona</p>
-        </section>
+        </header>
         <section id="#couple " class="couple ">
             <h2>The Couple</h2>
             <p>Text will go here when the bride and groom build up the courage to write about themselves.</p>
             <p><small><a href="#top ">Back to top</a></small></p>
         </section>
-        <section id="venue " class="venue ">
+        <section id="venue ">
             <h2>The Wedding Venue</h2>
+            <div class="banner venue"></div>
             <figure>
-                <img class="banner " src="/media/lamariposa.jpg " alt="Outdoor wedding venue with a wooden gazeebo ">
+                <!-- <img class="banner " src="/media/lamariposa.jpg " alt="Outdoor wedding venue with a wooden gazeebo "> -->
                 <figcaption>&#169; The Mariposa Resort</figcaption>
             </figure>
             <p>The wedding and reception will take place at the <em>La Mariposa Resort</em> in Tucson Arizona.</p>
@@ -169,7 +178,7 @@
             </figure>
             <figure class="sidebyside">
                 <img src="/media/grooms-family.ext" alt="Groom's family ">
-                <figcaption>The Shepherd Family<br>>Ted, Will, Scott, Mary</figcaption>
+                <figcaption>The Shepherd Family<br>Ted, Will, Scott, Mary</figcaption>
             </figure>
             <h3>Wedding Party</h3>
             <figure class="sidebyside ">
