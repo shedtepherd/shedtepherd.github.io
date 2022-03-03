@@ -12,6 +12,7 @@
             margin: 0px;
             padding: 0px;
             background: linear-gradient(white, goldenrod);
+            box-sizing: border-box;
         }
         
         .nav {
@@ -74,9 +75,11 @@
         }
         
         .banner {
-            max-width: 100%;
-            display: flex;
-            height: auto;
+            background-image: url(/media/top.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100%;
         }
         
         @media screen and (max-width: 600px) {
@@ -102,12 +105,11 @@
         }
         
         .column {
-            flex: 25%;
+            flex: 23%;
             max-width: 25%;
-            padding: 3px;
         }
         
-        .column img {
+        .column>img {
             vertical-align: middle;
             width: 100%;
         }
@@ -130,7 +132,8 @@
     <main>
         <section id="#top " class="top ">
             <h1>Shelley and Ted's Wedding</h1>
-            <img src="/media/top.jpg " class="banner " alt="Shelley and Ted embrace before a sunset ">
+            <div class="banner "></div>
+            <!-- <img src="/media/top.jpg " class="banner " alt="Shelley and Ted embrace before a sunset "> -->
             <p>October 16, 2022<br>Tucson, Arizona</p>
         </section>
         <section id="#couple " class="couple ">
@@ -225,17 +228,22 @@
             <p>Photos and videos of the bride, groom, and wedding will go here when we get some.</p>
             <div class="row ">
                 <div class="column ">
-                    <img class="galleryitem " src="/media/1.jpg " alt="Shelley and Ted stand side by side at sunset. Their arms are interlinked ">
+                    <img src="/media/1.jpg " alt="Shelley and Ted stand side by side at sunset. Their arms are interlinked ">
+                    <img src="/media/5.jpg">
                 </div>
                 <div class="column ">
-                    <img class="galleryitem " src="/media/2.jpg " alt="Shelley and Ted dance at sunset ">
+                    <img src="/media/2.jpg " alt="Shelley and Ted dance at sunset ">
+                    <img src="/media/6.jpg">
                 </div>
                 <div class="column ">
-                    <img class="galleryitem " src="/media/3.jpg " alt="Ted dips Shelley at sunset ">
+                    <img src="/media/3.jpg " alt="Ted dips Shelley at sunset ">
+                    <img src="/media/7.jpg">
                 </div>
-                <div class="column "></div>
-            </div>
-            <p><small><a href="#top ">Back to top</a></small></p>
+                <div class="column ">
+                    <img src="/media/top.jpg">
+                    <img src="/media/4.jpg" </div>
+                </div>
+                <p><small><a href="#top ">Back to top</a></small></p>
         </section>
     </main>
     <footer>
