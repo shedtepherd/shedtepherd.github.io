@@ -91,23 +91,6 @@
             background-position: center;
         }
         
-        @media screen and (max-width: 600px) {
-            .nav {
-                display: none
-            }
-            .column {
-                flex: 100%;
-                max-width: 100%;
-            }
-        }
-        
-        @media screen and (max-width: 800px) {
-            .column {
-                flex: 50%;
-                max-width: 50%;
-            }
-        }
-        
         .row {
             display: flex;
             flex-wrap: wrap;
@@ -121,6 +104,23 @@
         .column>img {
             vertical-align: middle;
             width: 100%;
+        }
+        
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .nav {
+                display: none
+            }
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -242,17 +242,16 @@
                 </div>
                 <div class="column ">
                     <img src="/media/2.jpg " alt="Shelley and Ted dance at sunset ">
-                    <img src="/media/6.jpg">
+                    <img src="/media/top.jpg">
                 </div>
                 <div class="column ">
                     <img src="/media/3.jpg " alt="Ted dips Shelley at sunset ">
-                    <img src="/media/7.jpg">
                 </div>
                 <div class="column ">
-                    <img src="/media/top.jpg">
-                    <img src="/media/4.jpg" </div>
+                    <img src="/media/4.jpg">
                 </div>
-                <p><small><a href="#top ">Back to top</a></small></p>
+            </div>
+            <p><small><a href="#top ">Back to top</a></small></p>
         </section>
     </main>
     <footer>
