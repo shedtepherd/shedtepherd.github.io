@@ -60,11 +60,6 @@
             color: black;
         }
         
-        .sidebyside img {
-            display: inline-block;
-            max-width: 50%;
-        }
-        
         h1 {
             text-align: center;
             color: goldenrod
@@ -95,6 +90,7 @@
         .row {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-evenly;
         }
         
         .column {
@@ -110,6 +106,11 @@
         .column>img {
             vertical-align: middle;
             width: 100%;
+        }
+        
+        h2,
+        h3 {
+            text-align: center;
         }
         
         @media screen and (max-width: 800px) {
@@ -186,7 +187,7 @@
         </section>
         <section id="party " class="party ">
             <h2>The Wedding Party</h2>
-            <h3>Families</h3>
+            <h3 class="center ">Families</h3>
             <div class="row ">
                 <div class="column ">
                     <figure>
@@ -222,12 +223,12 @@
                         <img src="/media/stephanie.webp " alt="Bridesmaid, Stephanie Wermuth ">
                         <figcaption>Bridesmaid<br>Stephanie Wermuth</figcaption>
                     </figure>
-                    <div class="column">
-                        <figure>
-                            <img src="/media/will.webp.ext " alt="Groomsman, Will Shepherd ">
-                            <figcaption>Groomsman<br>Will Shepherd</figcaption>
-                        </figure>
-                    </div>
+                </div>
+                <div class="column">
+                    <figure>
+                        <img src="/media/will.webp.ext " alt="Groomsman, Will Shepherd ">
+                        <figcaption>Groomsman<br>Will Shepherd</figcaption>
+                    </figure>
                 </div>
             </div>
             <p><small><a href="#top ">Back to top</a></small></p>
